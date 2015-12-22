@@ -3,7 +3,7 @@ class select {
 
 	public static void main(String[] args) {
         
-        int[] tab = {5,9,4,1,2,7,3,8,6,0};
+        int[] tab = {9,1,6,7,3,5,2,4,0,8};
         
         int i,j;
         
@@ -16,7 +16,7 @@ class select {
                 min = j;
                 }
             }
-            if (min != i) {                     // swaps i for min, so absolute min is now at tab[0]. Then repeats entire process to find new minimum & swap w/ tab[1].
+            if (min != i && tab[min] < tab[i]) {                     // swaps i for min, so absolute min is now at tab[0]. Then repeats entire process to find new minimum & swap w/ tab[1].
                 int x = tab[min];
                 tab[min] = tab[i];
                 tab[i] = x;
